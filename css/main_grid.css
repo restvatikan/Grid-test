@@ -1,0 +1,123 @@
+@charset "UTF-8";
+.div {
+  box-sizing: border-box;
+}
+
+.grid-container1 {
+  display: grid;
+  margin-bottom: 100px;
+  width: 400px;
+  height: 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2px;
+}
+.grid-container1 div {
+  border: 1px solid black;
+}
+
+.grid-nav1 {
+  grid-column: 1/5;
+  background-color: #eee;
+}
+
+.grid-sidebar1 {
+  grid-row: 2/4;
+  background-color: #ccc;
+}
+
+.grid-content1 {
+  grid-column: 2/5;
+  grid-row: 2/4;
+  background-color: #999;
+}
+
+.grid-container2 {
+  display: grid;
+  margin-bottom: 100px;
+  width: 400px;
+  height: 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 2px;
+  grid-template-areas: "헤더 헤더 헤더 헤더" "사이드 컨텐츠 컨텐츠 컨텐츠" "사이드 컨텐츠 컨텐츠 컨텐츠";
+}
+.grid-container2 div {
+  border: 1px solid black;
+}
+
+.grid-nav2 {
+  grid-area: 헤더;
+  background-color: #eee;
+}
+
+.grid-sidebar2 {
+  grid-area: 사이드;
+  background-color: #ccc;
+}
+
+.grid-content2 {
+  grid-area: 컨텐츠;
+  background-color: #999;
+}
+
+.grid-container3 {
+  width: 400px;
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "gr01 gr01 gr02" "gr01 gr01 gr03" "gr04 gr05 gr06";
+}
+.grid-container3 div {
+  border: 1px solid grey;
+}
+.grid-container3 div img {
+  width: 100%;
+  height: 100%;
+}
+
+.gr-01 {
+  grid-area: gr01;
+}
+
+.gr-02 {
+  grid-area: gr02;
+}
+
+.gr-03 {
+  grid-area: gr03;
+}
+
+.gr-04 {
+  grid-area: gr04;
+}
+
+.gr-05 {
+  grid-area: gr05;
+}
+
+.gr-06 {
+  grid-area: gr06;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-nav1 {
+    grid-column: 1/3;
+  }
+  .grid-sidebar1 {
+    grid-column: 3/5;
+    grid-row: 1/2;
+  }
+  .grid-content1 {
+    grid-column: 1/5;
+  }
+  .grid-container2 {
+    grid-template-areas: "헤더 헤더 사이드 사이드" "컨텐츠 컨텐츠 컨텐츠 컨텐츠" "컨텐츠 컨텐츠 컨텐츠 컨텐츠";
+  }
+  .grid-container3 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "gr01 gr02" "gr03 gr04" "gr05 gr06";
+  }
+}/*# sourceMappingURL=main_grid.css.map */
